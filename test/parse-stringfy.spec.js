@@ -1,4 +1,4 @@
-const assert = require("assert");
+//const assert = require("assert");
 
 const { parse, stringify } = require("../parse-stringfy");
 describe("The stringfy function", () => {
@@ -6,7 +6,9 @@ describe("The stringfy function", () => {
     const actual = stringify({ by: "kati-frantz" });
     const expected = "by=kati-frantz";
 
-    assert.equal(actual, expected);
+    // assert.equal(actual, expected);
+
+    expect(actual).toBe(expected);
   });
 });
 
@@ -15,6 +17,7 @@ describe("The parse function", () => {
     const actual = parse("?by=kati-frantz");
     const expected = { by: "kati-frantz" };
 
-    assert.deepEqual(actual, expected);
+    // assert.deepEqual(actual, expected);
+    expect(actual).toEqual(expected);
   });
 });
